@@ -18,52 +18,43 @@ A Nix-based tool for creating Haskell projects that balances Nix's reproducibili
 
 Note: nix-direnv will be automatically set up by the .envrc file if not already present.
 
-## Installation
+## Installation and Setup
 
-1. Clone this repository:
+1. Ensure you have Nix installed on your system.
+
+2. Clone this repository:
    ```bash
    git clone https://github.com/your-username/create-haskell-project.git
    cd create-haskell-project
    ```
 
-2. Make the script executable:
+3. Allow direnv to load the environment:
    ```bash
-   chmod +x create-haskell-project
+   direnv allow
    ```
 
-3. Optionally, add the directory containing the script to your PATH.
-
-4. Ensure you have direnv hooks set up in your shell. If not, add the following to your shell configuration file (e.g., .bashrc, .zshrc):
-   ```bash
-   eval "$(direnv hook bash)"  # or zsh, fish, etc.
-   ```
+   This step will set up the necessary environment, including making the `create-haskell-project` script available.
 
 ## Usage
 
-1. Navigate to the directory where you want to create your Haskell projects:
+1. From within the `create-haskell-project` directory, run:
    ```bash
-   cd ~/haskell-projects
+   create-haskell-project
    ```
 
-2. Run the create-haskell-project script:
+2. Follow the prompts to name your project and answer the questions from `cabal init`.
+
+3. Once complete, you can cd into your new project directory:
    ```bash
-   ./path/to/create-haskell-project
+   cd your-project-name
    ```
 
-3. Enter the name of your new Haskell project when prompted.
-
-4. The script will:
-   - Create a new directory for your project
-   - Initialize a Cabal project
-   - Set up a Nix flake for the project
-   - Initialize a Git repository
-   - Create a .envrc file for direnv
-
-5. To enter the development environment, run:
+4. Allow direnv to load the project-specific environment:
    ```bash
-   cd your-project-name && direnv allow
+   direnv allow
    ```
-   This will automatically set up nix-direnv if it's not already installed.
+
+Your new Haskell project is now set up and ready for development!
 
 ## Project Structure
 
@@ -92,10 +83,6 @@ You can customize the project template by modifying the `create-haskell-project`
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgments
 
