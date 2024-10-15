@@ -16,7 +16,7 @@ A Nix-based tool for creating Haskell projects that balances Nix's reproducibili
 - Nix package manager
 - Git
 
-Note: direnv and nix-direnv will be automatically set up by the .envrc file if not already present.
+Note: nix-direnv will be automatically set up by the .envrc file if not already present.
 
 ## Installation
 
