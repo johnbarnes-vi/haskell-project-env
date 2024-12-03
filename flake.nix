@@ -40,7 +40,7 @@
           fi
           use flake' > .envrc
 
-        # Create flake.nix; single-quotes around EOL to prevent shell expansion of ${system}
+        # Create flake.nix
         cat > flake.nix << 'EOL'
         {
         description = "A simple Haskell development environment";
