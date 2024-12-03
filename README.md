@@ -21,14 +21,14 @@ Note: nix-direnv will be automatically set up by the .envrc file if not already 
 ## Installation and Setup
 
 1. Ensure you have Nix installed on your system.
-
 2. Clone this repository:
-   ```bash
-   git clone https://github.com/your-username/create-haskell-project.git
-   cd create-haskell-project
-   ```
 
+   ```bash
+   git clone https://github.com/johnbarnes-vi/haskell-project-env.git
+   cd haskell-project-env
+   ```
 3. Allow direnv to load the environment:
+
    ```bash
    direnv allow
    ```
@@ -38,18 +38,18 @@ Note: nix-direnv will be automatically set up by the .envrc file if not already 
 ## Usage
 
 1. From within the `create-haskell-project` directory, run:
+
    ```bash
    create-haskell-project
    ```
-
 2. Follow the prompts to name your project and answer the questions from `cabal init`.
-
 3. Once complete, you can cd into your new project directory:
+
    ```bash
    cd your-project-name
    ```
-
 4. Allow direnv to load the project-specific environment:
+
    ```bash
    direnv allow
    ```
