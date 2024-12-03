@@ -40,8 +40,8 @@
           fi
           use flake' > .envrc
 
-        # Create flake.nix
-        cat > flake.nix << EOL
+        # Create flake.nix; single-quotes around EOL to prevent shell expansion of ${system}
+        cat > flake.nix << 'EOL'
         {
         description = "A simple Haskell development environment";
 
@@ -56,7 +56,7 @@
             {
             devShells = forAllSystems (system:
                 let
-                pkgs = nixpkgsFor.${system};
+                pkgs = nixpkgsFor.${"\${system}"};
                 in
                 {
                 default = pkgs.haskellPackages.developPackage {
@@ -85,7 +85,7 @@
       in
       {
         devShells.default = pkgs.mkShell {
-          buildInputs = [ create-project ];
+          buildInputs = [ create-project pkgs.cabal-install ];
         };
       }
     );
