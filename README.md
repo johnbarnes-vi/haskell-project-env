@@ -53,6 +53,7 @@ Note: nix-direnv will be automatically set up by the .envrc file if not already 
    ```bash
    direnv allow
    ```
+5. To install new cabal packages, add them to the .cabal file directly and then run `direnv reload`.
 
 Your new Haskell project is now set up and ready for development!
 
