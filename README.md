@@ -25,7 +25,7 @@ Note: nix-direnv will be automatically set up by the .envrc file if not already 
 
    ```bash
    git clone https://github.com/johnbarnes-vi/haskell-project-env.git
-   cd create-haskell-project
+   cd haskell-project-env
    ```
 3. Allow direnv to load the environment:
 
